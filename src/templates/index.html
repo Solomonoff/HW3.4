@@ -1,10 +1,22 @@
-{% set title="Main Page" %}
-{% set lang="en" %}
-
+{% set title = 'Главная' %}
+{% set tipe = 'index' %}
 {% include 'parts/_head.html' %}
 
-{% include 'parts/_header.html' %}
+<main>
+    <h1>Главная</h1>
+    <section class="services">
+        <h2 class="services--h">
+            Услуги
+        </h2>
+        {% set services = ['Обучение', 'Консультация', 'Код ревью'] %}
+        <ul class="services--list list">
+            {% for service in services %}
+            <li class="list--item">
+                {{ service }}
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+</main>
 
-<h1>Hello world</h1>
- 
-{% include 'parts/_foot.html' %}
+{% include 'parts/_footer.html' %}

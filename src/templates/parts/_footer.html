@@ -1,0 +1,25 @@
+<footer class="main-footer">
+    <p class="main-footer--copyright">
+        Все права защищены © 2021
+    </p>    
+</footer>
+{% if type == 'index' %}
+        <li class="active">
+            <a href="prices.html">Цены</a>
+            <a href="schedule.html">Расписание</a>
+        </li>
+        
+
+    {% elif type == 'schedule' %}
+        <li class="active">
+            <a href="index.html">Главная</a>
+            <a href="prices.html">Цены</a>
+        </li>
+        
+
+    {% elif type == 'prices' %}
+        <li class="active">
+            <a href="index.html">Главная</a>
+            <a href="schedule.html">Расписание</a>
+        </li>
+    {% endif %}
