@@ -1,8 +1,55 @@
 {% set title = 'Цены' %}
-{% set tipe = 'prices' %}
+{% set type = 'prices' %}
 {% include 'parts/_head.html' %}
+{%set table1 =  ['Курсы', '60 дней', '20000'] %}  
+{%set table2 =  ['Консультации', '1 час', '500'] %} 
+{%set table3 = ['Код ревью', '1 раз', '500'] %} 
+
 
 <body>
-    <h1>Цены</h1>    
+    <h1>Цены</h1> 
+     
+    <table border="1">
+        <tr>
+            <th>
+                Услуга
+            </th>
+            <th>
+                Количество
+            </th>
+            <th>
+                Цена
+            </th>
+        </tr>
+        <tr>
+            
+            {% for first in table1 %}
+            <td>
+                
+                {{ first }}
+            </td>
+            
+            {% endfor %}
+        </tr>
+        <tr>
+            {% for second in table2 %}
+            <td>
+                
+                {{ second }}
+            </td>
+            
+            {% endfor %}
+        </tr>
+        <tr>
+            {% for third in table3 %}
+            <td>
+                
+                {{ third }}
+            </td>
+            
+            {% endfor %}
+        </tr>
+
+    </table>
 </body>
 {% include 'parts/_footer.html' %}
