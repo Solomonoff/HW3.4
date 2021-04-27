@@ -1,28 +1,30 @@
 {% set title = 'Расписание' %}
 {% set type = 'schedule' %}
 {% include 'parts/_head.html' %}
-<body>
-    <h1>Расписание</h1>
+<body class="main-header">
+        <div>
+            <h1>Расписание</h1>
     
-    <ul>
-        {% set days = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'пятница'] %}
-    {% for day in days %}
-        <li>{{day}}
-            <ul>
-                <li>
-                    - Задания
-                </li>
-                <li>
-                    - Консультации
-                </li>
-            </ul>
-        </li>
+                <ul>
+                    {% set days = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'пятница'] %}
+                    {% for day in days %}
+                    <li>{{day}}
+                        <ul>
+                            <li>
+                            - Задания
+                            </li>
+                            <li>
+                            - Консультации
+                            </li>
+                        </ul>
+                    </li>
         
-    {% endfor %}
-    <li>Суббота, Воскресенье
-        <ul>
-            <li>выходные</li>
-        </ul>
-    </li>
+                    {% endfor %}
+             <li>Суббота, Воскресенье
+                <ul>
+                <li>выходные</li>
+                </ul>
+            </li>
+        </div>
 </body>
 {% include 'parts/_footer.html' %}
